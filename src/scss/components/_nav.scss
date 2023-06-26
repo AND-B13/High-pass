@@ -1,0 +1,15 @@
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 79px;
+  }
+
+  &__link {
+    display: block;
+    font-family: "TTFirsNeue";
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--color-light);
+  }
+}

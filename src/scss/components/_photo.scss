@@ -1,0 +1,25 @@
+.photo {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: var(--grid-gap);
+    row-gap: 26px;
+  }
+
+  &__item {
+    grid-column: span 3;
+
+    &--big {
+      grid-column: span 6;
+    }
+  }
+
+  &__image {
+    display: block;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

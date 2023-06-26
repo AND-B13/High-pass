@@ -1,0 +1,506 @@
+:root {
+  --font-family: "Roboto", "TTFirsNeue", sans-serif;
+  --content-width: 1290px;
+  --container-offset: 15px;
+  --grid-gap: 30px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --color-light: #ffffff;
+  --color-mine-shaft: #202020;
+  --color-tundora: #4a4a4a;
+  --color-silver: #cacaca;
+  --color-mercury: #e9e9e9;
+  --color-burning-orange: #ff6e30;
+  --color-light-mine-shaft: #333333;
+}
+
+/* stylelint-disable */ /* stylelint-disable */ /* stylelint-disable */ /* stylelint-disable */ /* stylelint-disable */ /* stylelint-disable value-keyword-case */
+@font-face {
+  font-family: "Roboto";
+  src: local("RobotoRegular"), url("../fonts/RobotoRegular.woff2") format("woff2"), url("../fonts/RobotoRegular.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("RobotoBold"), url("../fonts/RobotoBold.woff2") format("woff2"), url("../fonts/RobotoBold.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TTFirsNeue";
+  src: local("TTFirsNeueRegular"), url("../fonts/TTFirsNeueRegular.woff2") format("woff2"), url("../fonts/TTFirsNeueRegular.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TTFirsNeue";
+  src: local("TTFirsNeueBold"), url("../fonts/TTFirsNeueBold.woff2") format("woff2"), url("../fonts/TTFirsNeueBold.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TTFirsNeue";
+  src: local("TTFirsNeueMedium"), url("../fonts/TTFirsNeueMedium.woff2") format("woff2"), url("../fonts/TTFirsNeueMedium.woff") format("woff");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.page {
+  height: 100%;
+  font-family: var(--font-family);
+  -webkit-text-size-adjust: 100%;
+}
+
+.page__body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100%;
+  font-size: 16px;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+.site-container {
+  overflow: hidden;
+}
+
+.is-hidden {
+  display: none !important; /* stylelint-disable-line declaration-no-important */
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.input-reset {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+}
+.input-reset::-webkit-search-decoration, .input-reset::-webkit-search-cancel-button, .input-reset::-webkit-search-results-button, .input-reset::-webkit-search-results-decoration {
+  display: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  max-width: var(--container-width);
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.centered {
+  text-align: center;
+}
+
+.dis-scroll {
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  overscroll-behavior: none;
+}
+
+.page--ios .dis-scroll {
+  position: relative;
+}
+
+.centered {
+  width: 100%;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 20px;
+  border: 3px solid var(--color-burning-orange);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--color-light);
+}
+.btn--primary {
+  background-color: var(--color-burning-orange);
+}
+
+.title {
+  margin: 0;
+  font-family: "TTFirsNeue";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 104%;
+  color: var(--color-mine-shaft);
+}
+.title--center {
+  text-align: center;
+}
+.title--light {
+  color: var(--color-light);
+}
+
+.descr {
+  margin: 0;
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--color-silver);
+}
+.descr--center {
+  text-align: center;
+}
+.descr--light {
+  color: var(--color-light);
+}
+
+.header {
+  background-color: var(--color-mine-shaft);
+}
+.header__top {
+  padding-top: 24px;
+  padding-bottom: 25px;
+  background-color: var(--color-mine-shaft);
+}
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__image {
+  display: block;
+  font-size: 0;
+}
+.header__image img {
+  width: 190px;
+  height: 31px;
+}
+.header__nav {
+  transform: translateX(25px);
+}
+.header__list {
+  display: flex;
+  gap: 21px;
+}
+.header__link {
+  display: flex;
+}
+.header__icon {
+  width: 30px;
+  height: 30px;
+  fill: var(--color-silver);
+}
+.header__bottom {
+  padding-top: 11px;
+  padding-bottom: 9px;
+  background-color: var(--color-tundora);
+}
+.header__number {
+  display: flex;
+  align-items: center;
+  font-family: "TTFirsNeue";
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--color-light);
+}
+.header__number svg {
+  width: 20px;
+  height: 20px;
+  color: inherit;
+  fill: currentColor;
+  transition: fill 0.3s ease-in-out;
+}
+.header__form {
+  display: flex;
+  align-items: center;
+}
+.header__form svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--color-light);
+}
+.header__btn {
+  display: flex;
+  align-items: center;
+  outline: none;
+}
+.header__search {
+  min-width: 172px;
+  border: none;
+  border-bottom: 1px solid var(--color-mercury);
+  font-family: "TTFirsNeue";
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--color-mercury);
+  outline: none;
+  background-color: inherit;
+}
+.header__search::-moz-placeholder {
+  font-family: "TTFirsNeue";
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--color-mercury);
+}
+.header__search::placeholder {
+  font-family: "TTFirsNeue";
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--color-mercury);
+}
+
+.hero {
+  margin-bottom: 34px;
+  padding-top: 35px;
+  background-color: var(--color-light);
+}
+.hero__wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--grid-gap);
+}
+.hero__article {
+  grid-column: span 6;
+  padding-top: 5px;
+}
+.hero__photo {
+  grid-column: span 6;
+}
+.hero__title {
+  margin-bottom: 24px;
+}
+
+.about-us {
+  padding-top: 36px;
+  padding-bottom: 69px;
+  background-color: var(--color-mine-shaft);
+}
+.about-us__title {
+  margin-bottom: 5px;
+}
+.about-us__content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--grid-gap);
+  min-height: 365px;
+}
+.about-us__descr {
+  grid-column: span 6;
+}
+.about-us__subscription {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  grid-column: span 6;
+  background-image: url("../img/about-us-bg.jpg");
+  background-position: top center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.about-us__subtitle {
+  margin: 0;
+  margin-bottom: 14px;
+  font-family: "TTFirsNeue";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 22px;
+  color: var(--color-light);
+}
+
+.projects {
+  margin-bottom: 40px;
+  padding-top: 44px;
+  padding-bottom: 44px;
+}
+.projects__title {
+  margin-bottom: 14px;
+}
+.projects__list {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--grid-gap);
+}
+.projects__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  grid-column: span 2;
+  min-height: 300px;
+}
+.projects__item--midl {
+  grid-column: span 3;
+}
+.projects__item--big {
+  grid-column: span 6;
+  padding-top: 0;
+}
+
+.card-project {
+  background-position: top center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.card-project--one {
+  background-image: url("../img/card-project-one.jpg");
+}
+.card-project--two {
+  background-image: url("../img/card-project-two.jpg");
+}
+.card-project--three {
+  background-image: url("../img/card-project-three.jpg");
+}
+.card-project--four {
+  background-image: url("../img/card-project-four.jpg");
+}
+.card-project--five {
+  background-image: url("../img/card-project-five.jpg");
+}
+.card-project--six {
+  background-image: url("../img/card-project-six.jpg");
+}
+.card-project--seven {
+  background-image: url("../img/card-project-seven.jpg");
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: 79px;
+}
+.nav__link {
+  display: block;
+  font-family: "TTFirsNeue";
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--color-light);
+}
+
+.article-abc {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 60px 58px;
+  min-height: 630px;
+  background-image: url("../img/article-abc-bg.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.article-abc__descr {
+  margin-bottom: 3px;
+  line-height: 20px;
+}
+.article-abc__title {
+  margin: 0;
+  margin-bottom: 17px;
+  font-family: "TTFirsNeue";
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 104%;
+  color: var(--color-light);
+}
+.article-abc__btn {
+  align-self: flex-start;
+}
+.article-abc__hashtag {
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  padding: 7px 15px;
+  font-size: 14px;
+  color: var(--color-light);
+  background-color: var(--color-light-mine-shaft);
+}
+
+.photo__list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  -moz-column-gap: var(--grid-gap);
+       column-gap: var(--grid-gap);
+  row-gap: 26px;
+}
+.photo__item {
+  grid-column: span 3;
+}
+.photo__item--big {
+  grid-column: span 6;
+}
+.photo__image {
+  display: block;
+}
+.photo__image img {
+  width: 100%;
+  height: 100%;
+}
+
+.subscription {
+  display: flex;
+  align-items: center;
+}
+.subscription__input {
+  margin-right: var(--grid-gap);
+  padding: 15px 23px;
+  width: 75%;
+  border: none;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--color-burning-orange);
+  outline: none;
+  background-color: var(--color-tundora);
+}
+.subscription__input::-moz-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--color-silver);
+}
+.subscription__input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--color-silver);
+}/*# sourceMappingURL=main.css.map */

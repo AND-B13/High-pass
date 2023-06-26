@@ -1,0 +1,41 @@
+.about-us {
+  padding-top: 36px;
+  padding-bottom: 69px;
+  background-color: var(--color-mine-shaft);
+
+  &__title {
+    margin-bottom: 5px;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gap);
+    min-height: 365px;
+  }
+
+  &__descr {
+    grid-column: span 6;
+  }
+
+  &__subscription {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    grid-column: span 6;
+    background-image: url("../img/about-us-bg.jpg");
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 14px;
+    font-family: "TTFirsNeue";
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 22px;
+    color: var(--color-light);
+  }
+}

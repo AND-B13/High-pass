@@ -1,0 +1,24 @@
+.hero {
+  margin-bottom: 34px;
+  padding-top: 35px;
+  background-color: var(--color-light);
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gap);
+  }
+
+  &__article {
+    grid-column: span 6;
+    padding-top: 5px;
+  }
+
+  &__photo {
+    grid-column: span 6;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+}

@@ -1,0 +1,102 @@
+.header {
+  background-color: var(--color-mine-shaft);
+  &__top {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    background-color: var(--color-mine-shaft);
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__image {
+    display: block;
+    font-size: 0;
+
+    img {
+      width: 190px;
+      height: 31px;
+    }
+  }
+
+  &__nav {
+    transform: translateX(25px);
+  }
+
+  &__list {
+    display: flex;
+    gap: 21px;
+  }
+
+  &__link {
+    display: flex;
+  }
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+    fill: var(--color-silver);
+  }
+
+  &__bottom {
+    padding-top: 11px;
+    padding-bottom: 9px;
+    background-color: var(--color-tundora);
+  }
+
+  &__number {
+    display: flex;
+    align-items: center;
+    font-family: "TTFirsNeue";
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--color-light);
+
+    svg {
+      width: 20px;
+      height: 20px;
+      color: inherit;
+      fill: currentColor;
+      transition: fill .3s ease-in-out;
+    }
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: var(--color-light);
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    outline: none;
+  }
+
+  &__search {
+    min-width: 172px;
+    border: none;
+    border-bottom: 1px solid var(--color-mercury);
+    font-family: "TTFirsNeue";
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--color-mercury);
+    outline: none;
+    background-color: inherit;
+
+    &::placeholder {
+      font-family: "TTFirsNeue";
+      font-weight: 400;
+      font-size: 14px;
+      color: var(--color-mercury);
+    }
+  }
+}

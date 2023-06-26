@@ -1,0 +1,41 @@
+.article-abc {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 60px 58px;
+  min-height: 630px;
+  background-image: url("../img/article-abc-bg.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  &__descr {
+    margin-bottom: 3px;
+    line-height: 20px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 17px;
+    font-family: "TTFirsNeue";
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 104%;
+    color: var(--color-light);
+  }
+
+  &__btn {
+    align-self: flex-start;
+  }
+
+  &__hashtag {
+    position: absolute;
+    top: 16px;
+    right: 15px;
+    padding: 7px 15px;
+    font-size: 14px;
+    color: var(--color-light);
+    background-color: var(--color-light-mine-shaft);
+  }
+}

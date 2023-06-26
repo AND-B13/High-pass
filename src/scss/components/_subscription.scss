@@ -1,0 +1,22 @@
+.subscription {
+  display: flex;
+  align-items: center;
+
+  &__input {
+    margin-right: var(--grid-gap);
+    padding: 15px 23px;
+    width: 75%;
+    border: none;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--color-burning-orange);
+    outline: none;
+    background-color: var(--color-tundora);
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 16px;
+      color: var(--color-silver);
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.projects {
+  margin-bottom: 40px;
+  padding-top: 44px;
+  padding-bottom: 44px;
+
+  &__title {
+    margin-bottom: 14px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gap);
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    grid-column: span 2;
+    min-height: 300px;
+
+    &--midl {
+      grid-column: span 3;
+    }
+
+    &--big {
+      grid-column: span 6;
+      padding-top: 0;
+    }
+  }
+}
+
+.card-project {
+  background-position: top center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  &--one {
+    background-image: url("../img/card-project-one.jpg");
+  }
+
+  &--two {
+    background-image: url("../img/card-project-two.jpg");
+  }
+
+  &--three {
+    background-image: url("../img/card-project-three.jpg");
+  }
+
+  &--four {
+    background-image: url("../img/card-project-four.jpg");
+  }
+
+  &--five {
+    background-image: url("../img/card-project-five.jpg");
+  }
+
+  &--six {
+    background-image: url("../img/card-project-six.jpg");
+  }
+
+  &--seven {
+    background-image: url("../img/card-project-seven.jpg");
+  }
+}
