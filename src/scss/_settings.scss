@@ -88,10 +88,6 @@ a {
   outline: none;
 }
 
-.centered {
-  text-align: center;
-}
-
 .dis-scroll {
   position: fixed;
   left: 0;
@@ -153,5 +149,9 @@ a {
 
   &--light {
     color: var(--color-light);
+  }
+
+  &--grey {
+    color: #999;
   }
 }

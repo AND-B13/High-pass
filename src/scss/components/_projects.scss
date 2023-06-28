@@ -1,40 +1,148 @@
 .projects {
-  margin-bottom: 40px;
   padding-top: 44px;
-  padding-bottom: 44px;
+  padding-bottom: 43px;
 
   &__title {
     margin-bottom: 14px;
   }
 
+  &__wrapper {
+    margin-bottom: 50px;
+  }
+
   &__list {
-    display: grid;
+    display: none;
     grid-template-columns: repeat(12, 1fr);
     gap: var(--grid-gap);
+
+    &--active {
+      display: grid;
+    }
   }
 
   &__item {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
     grid-column: span 2;
+    padding-top: 202px;
     min-height: 300px;
 
     &--midl {
+      display: flex;
+      flex-direction: column;
       grid-column: span 3;
     }
 
     &--big {
+      display: flex;
+      flex-direction: column;
       grid-column: span 6;
-      padding-top: 0;
+      padding: 24px 30px 30px 30px;
+      background-color: var(--color-tundora);
+    }
+
+    &--reverse {
+      order: -1;
     }
   }
 }
 
 .card-project {
+  position: relative;
   background-position: top center;
   background-size: contain;
   background-repeat: no-repeat;
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    outline: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    &:focus-visible::before {
+      outline: 1px solid red;
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--color-mine-shaft);
+
+    &--light {
+      color: var(--color-light);
+      max-width: 292px;
+    }
+
+    &--midl {
+      margin-bottom: 13px;
+    }
+
+    &--big {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__btn {
+    align-self: flex-start;
+    margin-top: auto;
+  }
+
+  &__date {
+    display: block;
+    padding-left: 16px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 19px;
+    color: #999;
+    background-position: left top;
+    background-size: 14px 14px;
+    background-repeat: no-repeat;
+
+    &--grey {
+      background-image: url("../img/calendar-grey.svg");
+    }
+
+    &--light {
+      color: var(--color-light);
+      background-image: url("../img/calendar-light.svg");
+    }
+
+    &--midl {
+      line-height: 13px;
+    }
+
+    &--big {
+      margin-bottom: 2px;
+    }
+  }
+
+  &__hashtag {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    padding: 6px 14px;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--color-light);
+    background-color: var(--color-light-mine-shaft);
+  }
+
+  &__subtitle {
+    margin-bottom: 6px;
+    max-width: 292px;
+  }
 
   &--one {
     background-image: url("../img/card-project-one.jpg");
@@ -62,5 +170,33 @@
 
   &--seven {
     background-image: url("../img/card-project-seven.jpg");
+  }
+
+  &--eight {
+    background-image: url("../img/card-project-eight.jpg");
+  }
+
+  &--nine {
+    background-image: url("../img/card-project-nine.jpg");
+  }
+
+  &--ten {
+    background-image: url("../img/card-project-ten.jpg");
+  }
+
+  &--eleven {
+    background-image: url("../img/card-project-eleven.jpg");
+  }
+
+  &--twelve {
+    background-image: url("../img/card-project-twelve.jpg");
+  }
+
+  &--thirteen {
+    background-image: url("../img/card-project-thirteen.jpg");
+  }
+
+  &--fourteen {
+    background-image: url("../img/card-project-fourteen.jpg");
   }
 }

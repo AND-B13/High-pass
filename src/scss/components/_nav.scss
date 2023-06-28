@@ -2,7 +2,12 @@
   &__list {
     display: flex;
     align-items: center;
-    gap: 79px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 79px;
+    }
   }
 
   &__link {

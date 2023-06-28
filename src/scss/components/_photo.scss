@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     column-gap: var(--grid-gap);
-    row-gap: 26px;
+    row-gap: var(--grid-gap);
   }
 
   &__item {
@@ -16,6 +16,7 @@
 
   &__image {
     display: block;
+    font-size: 0;
 
     img {
       width: 100%;

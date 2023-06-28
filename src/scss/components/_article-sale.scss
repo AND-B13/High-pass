@@ -1,0 +1,54 @@
+.article-sale {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px 30px 30px;
+  background-color: var(--color-tundora);
+  background-image: url("../img/article-sale-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__topic {
+    display: block;
+    font-family: "TTFirsNeue";
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 37px;
+    color: var(--color-yellow);
+  }
+
+  &__terms {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--color-yellow);
+  }
+
+  &__descr {
+    margin: 0;
+    margin-top: auto;
+    margin-bottom: 9px;
+    max-width: 218px;
+    line-height: 21px;
+
+
+    &::before {
+      content: "";
+      position: relative;
+      display: block;
+      margin-bottom: 10px;
+      width: 116px;
+      height: 59px;
+      background-image: url("../img/sale-20.svg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__btn {
+    align-self: flex-start;
+  }
+}

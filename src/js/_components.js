@@ -1,5 +1,4 @@
-// пример подключения npm
-// import './components/sliders.js';
+import './components/tabs.js';
 // пример подключения cdn
 // import './components/accordions.js';
 // пример подключения просто кода
