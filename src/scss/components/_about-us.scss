@@ -11,7 +11,6 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: var(--grid-gap);
-    min-height: 365px;
   }
 
   &__descr {

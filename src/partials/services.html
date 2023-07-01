@@ -4,8 +4,8 @@
       <div class="services__nav">
         <h2 class="services__title title">Услуги студии</h2>
         <div class="services__tabs-slider tabs-slider">
-          <button class="tabs-slider__btn tabs-slider__btn--active btn-reset" aria-label="Перейти к основному перечню услуг">Основной перечень</button>
-          <button class="tabs-slider__btn btn-reset" aria-label="Перейти к услугам по ретуши">Услуги по ретуши</button>
+          <button class="tabs-slider__btn tabs-slider__btn--active btn-reset" data-path="one" aria-label="Перейти к основному перечню услуг">Основной перечень</button>
+          <button class="tabs-slider__btn btn-reset" data-path="two" aria-label="Перейти к услугам по ретуши">Услуги по ретуши</button>
         </div>
       </div>
       <article class="services__article article-sale">
@@ -15,10 +15,10 @@
         <a class="article-sale__btn btn btn--primary btn-reset" aria-label="Перейти на страницу акции">Узнать больше
         </a>
       </article>
-      <ul class="services__list services-list list-reset">
+      <ul class="services__list  services-list list-reset" data-target="one">
         <li class="services-list__item services-card">
           <picture class="services-card__image">
-            <img src="img/services-card-one.jpg" alt="Фотография с фотосессии">
+            <img src="img/services-card/services-card-one.jpg" alt="Фотография с фотосессии">
           </picture>
           <div class="services-card__info">
             <span class="services-card__topic">Высокий уровень вовлечения</span>
@@ -32,7 +32,7 @@
         </li>
         <li class="services-list__item services-card">
           <picture class="services-card__image">
-            <img src="img/services-card-two.jpg" alt="Фотография с фотосессии">
+            <img src="img/services-card/services-card-two.jpg" alt="Фотография с фотосессии">
           </picture>
           <div class="services-card__info">
             <span class="services-card__topic">Диаграммы связей</span>
@@ -46,7 +46,7 @@
         </li>
         <li class="services-list__item services-card">
           <picture class="services-card__image">
-            <img src="img/services-card-three.jpg" alt="Фотография с фотосессии">
+            <img src="img/services-card/services-card-three.jpg" alt="Фотография с фотосессии">
           </picture>
           <div class="services-card__info">
             <span class="services-card__topic">Высокотехнологичная концепция</span>
@@ -60,7 +60,7 @@
         </li>
         <li class="services-list__item services-card">
           <picture class="services-card__image">
-            <img src="img/services-card-four.jpg" alt="Фотография с фотосессии">
+            <img src="img/services-card/services-card-four.jpg" alt="Фотография с фотосессии">
           </picture>
           <div class="services-card__info">
             <span class="services-card__topic">Сложившаяся структура организации</span>
@@ -74,7 +74,7 @@
         </li>
         <li class="services-list__item services-card">
           <picture class="services-card__image">
-            <img src="img/services-card-five.jpg" alt="Фотография с фотосессии">
+            <img src="img/services-card/services-card-five.jpg" alt="Фотография с фотосессии">
           </picture>
           <div class="services-card__info">
             <span class="services-card__topic">Внутренние резервы и ресурсы</span>
@@ -87,9 +87,141 @@
           </div>
         </li>
       </ul>
+      <ul class="services__list services__list--hidden  services__list--two  services-list list-reset" data-target="two">
+        <li class="services-list__item services-list__item--small services-card">
+          <picture class="services-card__image services-card__image--small">
+            <img src="img/services-card/services-card-six.jpg" alt="Фотография с фотосессии">
+          </picture>
+          <div class="services-card__info services-card__info--small">
+            <span class="services-card__topic services-card__topic--small">Принимая во внимание показатели</span>
+            <a class="services-card__link" href="#" aria-label="Подробнее об перечне услуг">Подробнее
+              <svg class="services-card__icon">
+                <use xlink:href="img/sprite.svg#arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="services-list__item services-list__item--small services-card">
+          <picture class="services-card__image services-card__image--small">
+            <img src="img/services-card/services-card-seven.jpg" alt="Фотография с фотосессии">
+          </picture>
+          <div class="services-card__info services-card__info--small">
+            <span class="services-card__topic services-card__topic--small">Таким образом, выбранный нами...</span>
+            <a class="services-card__link" href="#" aria-label="Подробнее об перечне услуг">Подробнее
+              <svg class="services-card__icon">
+                <use xlink:href="img/sprite.svg#arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="services-list__item services-list__item--small services-card">
+          <picture class="services-card__image services-card__image--small">
+            <img src="img/services-card/services-card-eight.jpg" alt="Фотография с фотосессии">
+          </picture>
+          <div class="services-card__info services-card__info--small">
+            <span class="services-card__topic services-card__topic--small">Также как высокое качество...</span>
+            <a class="services-card__link" href="#" aria-label="Подробнее об перечне услуг">Подробнее
+              <svg class="services-card__icon">
+                <use xlink:href="img/sprite.svg#arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="services-list__item services-list__item--small services-card">
+          <picture class="services-card__image services-card__image--small">
+            <img src="img/services-card/services-card-nine.jpg" alt="Фотография с фотосессии">
+          </picture>
+          <div class="services-card__info services-card__info--small">
+            <span class="services-card__topic services-card__topic--small">Безусловно, семантический разбор...</span>
+            <a class="services-card__link" href="#" aria-label="Подробнее об перечне услуг">Подробнее
+              <svg class="services-card__icon">
+                <use xlink:href="img/sprite.svg#arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="services-list__item services-list__item--small services-card">
+          <picture class="services-card__image services-card__image--small">
+            <img src="img/services-card/services-card-ten.jpg" alt="Фотография с фотосессии">
+          </picture>
+          <div class="services-card__info services-card__info--small">
+            <span class="services-card__topic services-card__topic--small">Внезапно, предприниматели в интернете...</span>
+            <a class="services-card__link" href="#" aria-label="Подробнее об перечне услуг">Подробнее
+              <svg class="services-card__icon">
+                <use xlink:href="img/sprite.svg#arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="services-list__item services-list__item--small services-card">
+          <picture class="services-card__image services-card__image--small">
+            <img src="img/services-card/services-card-eleven.jpg" alt="Фотография с фотосессии">
+          </picture>
+          <div class="services-card__info services-card__info--small">
+            <span class="services-card__topic services-card__topic--small">Есть над чем подумать: активные...</span>
+            <a class="services-card__link" href="#" aria-label="Подробнее об перечне услуг">Подробнее
+              <svg class="services-card__icon">
+                <use xlink:href="img/sprite.svg#arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="services-list__item services-list__item--small services-card">
+          <picture class="services-card__image services-card__image--small">
+            <img src="img/services-card/services-card-twelve.jpg" alt="Фотография с фотосессии">
+          </picture>
+          <div class="services-card__info services-card__info--small">
+            <span class="services-card__topic services-card__topic--small">Сделанные наа базе аналитики выводы...</span>
+            <a class="services-card__link" href="#" aria-label="Подробнее об перечне услуг">Подробнее
+              <svg class="services-card__icon">
+                <use xlink:href="img/sprite.svg#arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="services-list__item services-list__item--small services-card">
+          <picture class="services-card__image services-card__image--small">
+            <img src="img/services-card/services-card-thirteen.jpg" alt="Фотография с фотосессии">
+          </picture>
+          <div class="services-card__info services-card__info--small">
+            <span class="services-card__topic services-card__topic--small">Как принято считать, сторонники...</span>
+            <a class="services-card__link" href="#" aria-label="Подробнее об перечне услуг">Подробнее
+              <svg class="services-card__icon">
+                <use xlink:href="img/sprite.svg#arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="services-list__item services-list__item--small services-card">
+          <picture class="services-card__image services-card__image--small ">
+            <img src="img/services-card/services-card-fourteen.jpg" alt="Фотография с фотосессии">
+          </picture>
+          <div class="services-card__info services-card__info--small">
+            <span class="services-card__topic services-card__topic--small">Задача организации, в особенности...</span>
+            <a class="services-card__link" href="#" aria-label="Подробнее об перечне услуг">Подробнее
+              <svg class="services-card__icon">
+                <use xlink:href="img/sprite.svg#arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="services-list__item services-list__item--small services-card">
+          <picture class="services-card__image services-card__image--small">
+            <img src="img/services-card/services-card-fifteen.jpg" alt="Фотография с фотосессии">
+          </picture>
+          <div class="services-card__info services-card__info--small">
+            <span class="services-card__topic services-card__topic--small">Активно развивающиеся страны...</span>
+            <a class="services-card__link" href="#" aria-label="Подробнее об перечне услуг">Подробнее
+              <svg class="services-card__icon">
+                <use xlink:href="img/sprite.svg#arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </li>
+      </ul>
       <div class="services__wrapper-work">
         <h3 class="services__subtitle title">Выполненные работы</h3>
-        <ul class="services-works list-reset">
+        <ul class="services-works list-reset" data-target="one">
           <li class="services-works__item">
             <a class="services-works__link" href="#" aria-label="Узнать больше о данной работе">
               <picture class="services-works__image">
@@ -203,6 +335,120 @@
             </a>
           </li>
 
+        </ul>
+        <ul class="services-works services-works--hidden list-reset" data-target="two">
+          <li class="services-works__item">
+            <a class="services-works__link" href="#" aria-label="Узнать больше о данной работе">
+              <picture class="services-works__image">
+                <img src="img/services-works/services-works-17.jpg" alt="Фотография из фотосессии">
+              </picture>
+            </a>
+          </li>
+          <li class="services-works__item">
+            <a class="services-works__link" href="#" aria-label="Узнать больше о данной работе">
+              <picture class="services-works__image">
+                <img src="img/services-works/services-works-18.jpg" alt="Фотография из фотосессии">
+              </picture>
+            </a>
+          </li>
+          <li class="services-works__item">
+            <a class="services-works__link" href="#" aria-label="Узнать больше о данной работе">
+              <picture class="services-works__image">
+                <img src="img/services-works/services-works-19.jpg" alt="Фотография из фотосессии">
+              </picture>
+            </a>
+          </li>
+          <li class="services-works__item">
+            <a class="services-works__link" href="#" aria-label="Узнать больше о данной работе">
+              <picture class="services-works__image">
+                <img src="img/services-works/services-works-20.jpg" alt="Фотография из фотосессии">
+              </picture>
+            </a>
+          </li>
+          <li class="services-works__item">
+            <a class="services-works__link" href="#" aria-label="Узнать больше о данной работе">
+              <picture class="services-works__image">
+                <img src="img/services-works/services-works-21.jpg" alt="Фотография из фотосессии">
+              </picture>
+            </a>
+          </li>
+          <li class="services-works__item">
+            <a class="services-works__link" href="#" aria-label="Узнать больше о данной работе">
+              <picture class="services-works__image">
+                <img src="img/services-works/services-works-22.jpg" alt="Фотография из фотосессии">
+              </picture>
+            </a>
+          </li>
+          <li class="services-works__item">
+            <a class="services-works__link" href="#" aria-label="Узнать больше о данной работе">
+              <picture class="services-works__image">
+                <img src="img/services-works/services-works-23.jpg" alt="Фотография из фотосессии">
+              </picture>
+            </a>
+          </li>
+          <li class="services-works__item">
+            <a class="services-works__link" href="#" aria-label="Узнать больше о данной работе">
+              <picture class="services-works__image">
+                <img src="img/services-works/services-works-24.jpg" alt="Фотография из фотосессии">
+              </picture>
+            </a>
+          </li>
+          <li class="services-works__item">
+            <a class="services-works__link" href="#" aria-label="Узнать больше о данной работе">
+              <picture class="services-works__image">
+                <img src="img/services-works/services-works-25.jpg" alt="Фотография из фотосессии">
+              </picture>
+            </a>
+          </li>
+          <li class="services-works__item">
+            <a class="services-works__link" href="#" aria-label="Узнать больше о данной работе">
+              <picture class="services-works__image">
+                <img src="img/services-works/services-works-26.jpg" alt="Фотография из фотосессии">
+              </picture>
+            </a>
+          </li>
+          <li class="services-works__item">
+            <a class="services-works__link" href="#" aria-label="Узнать больше о данной работе">
+              <picture class="services-works__image">
+                <img src="img/services-works/services-works-27.jpg" alt="Фотография из фотосессии">
+              </picture>
+            </a>
+          </li>
+          <li class="services-works__item">
+            <a class="services-works__link" href="#" aria-label="Узнать больше о данной работе">
+              <picture class="services-works__image">
+                <img src="img/services-works/services-works-28.jpg" alt="Фотография из фотосессии">
+              </picture>
+            </a>
+          </li>
+          <li class="services-works__item">
+            <a class="services-works__link" href="#" aria-label="Узнать больше о данной работе">
+              <picture class="services-works__image">
+                <img src="img/services-works/services-works-29.jpg" alt="Фотография из фотосессии">
+              </picture>
+            </a>
+          </li>
+          <li class="services-works__item">
+            <a class="services-works__link" href="#" aria-label="Узнать больше о данной работе">
+              <picture class="services-works__image">
+                <img src="img/services-works/services-works-30.jpg" alt="Фотография из фотосессии">
+              </picture>
+            </a>
+          </li>
+          <li class="services-works__item">
+            <a class="services-works__link" href="#" aria-label="Узнать больше о данной работе">
+              <picture class="services-works__image">
+                <img src="img/services-works/services-works-31.jpg" alt="Фотография из фотосессии">
+              </picture>
+            </a>
+          </li>
+          <li class="services-works__item">
+            <a class="services-works__link" href="#" aria-label="Узнать больше о данной работе">
+              <picture class="services-works__image">
+                <img src="img/services-works/services-works-32.jpg" alt="Фотография из фотосессии">
+              </picture>
+            </a>
+          </li>
         </ul>
       </div>
     </div>

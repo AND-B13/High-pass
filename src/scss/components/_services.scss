@@ -1,10 +1,10 @@
 .services {
-  padding-bottom: 40px;
+  padding-bottom: 39px;
 
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: minmax(70px,auto) minmax(396px, auto);
+    grid-template-rows: minmax(70px,auto) auto;
     gap: var(--grid-gap);
   }
 
@@ -26,6 +26,17 @@
   &__list {
     grid-column: 1 /span 8;
     grid-row: 2 / span 2;
+
+    &--two {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      column-gap: var(--grid-gap);
+      row-gap: 25px;
+    }
+
+    &--hidden {
+      display: none;
+    }
   }
 
   &__wrapper-work {
@@ -43,6 +54,15 @@
     &:not(:last-child) {
       margin-bottom: 25px;
     }
+
+    &--small {
+      grid-column: span 4;
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+
+    }
   }
 }
 
@@ -50,6 +70,10 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--grid-gap);
+
+  &--hidden {
+    display: none;
+  }
 
   &__item {
     grid-column: 1 span;

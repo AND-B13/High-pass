@@ -1,0 +1,41 @@
+.contacts {
+  padding-top: 44px;
+  padding-bottom: 69px;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gap);
+  }
+
+  &__map {
+    position: relative;
+    grid-column: span 8;
+  }
+
+  &__form {
+    grid-column: span 4;
+  }
+}
+
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}
+
+[class*="ymaps-2-1-79-copyright"] {
+  display: none;
+}
+
+.map {
+
+  &__wrapper {
+    position: absolute;
+    z-index: 2;
+    width: 50%;
+    background-color: rgba(32, 32, 32, 0.85);;
+  }
+}
+
+.form {
+
+}
