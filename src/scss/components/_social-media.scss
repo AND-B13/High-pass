@@ -1,0 +1,36 @@
+.social-media {
+  display: flex;
+  gap: 21px;
+
+  &__link {
+    display: flex;
+    color: var(--color-silver);
+    outline: none;
+    transition: color .3s ease;
+
+    @media (hover :hover) {
+      &:hover {
+        color: var(--color-burning-orange);
+      }
+    }
+
+    &:focus {
+      color: var(--color-tuscany);
+    }
+
+    &:focus-visible {
+      color: var(--color-burning-orange);
+    }
+
+    &:active {
+      color: var(--color-grenadier);
+    }
+  }
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+    color: inherit;
+    fill: currentColor;
+  }
+}

@@ -1,4 +1,5 @@
 ymaps.ready(init);
+
 function init() {
   const myMap = new ymaps.Map("myMap", {
     center: [ 55.769535, 37.639985],
@@ -9,7 +10,7 @@ function init() {
 
   const myPlacemark = new ymaps.Placemark([55.769535, 37.639985], {}, {
     iconLayout: 'default#image',
-    iconImageHref: 'img/location.svg',
+    iconImageHref: './img/location.svg',
     iconImageSize: [40, 40],
     iconImageOffset: [-3, -42]
   });

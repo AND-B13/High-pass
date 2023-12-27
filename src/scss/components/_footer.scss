@@ -1,0 +1,49 @@
+.footer {
+  padding-top: 26px;
+  padding-bottom: 16px;
+  background-color: var(--color-mine-shaft);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__link {
+    display: inline-block;
+    margin-bottom: 7.5px;
+    font-size: 0;
+  }
+
+  &__logo {
+    display: inline-block;
+    font-size: 0;
+  }
+
+  &__title {
+    margin: 0;
+    font-family: "TTFirsNeue";
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-mercury);
+  }
+
+  &__wrapper-content {
+    max-width: 361px;
+    transform: translateX(-9px);
+  }
+
+  &__descr {
+    display: block;
+    line-height: 22px;
+    margin-bottom: 6px;
+
+    &--min {
+      display: block;
+      color: var(--color-grey);
+    }
+  }
+
+  &__list {
+    justify-content: center;
+  }
+}

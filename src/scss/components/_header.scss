@@ -12,6 +12,22 @@
     justify-content: space-between;
   }
 
+  &__logo {
+    transform: scale(1);
+    outline: none;
+    transition: transform .5s ease;
+
+    @media (hover :hover) {
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    &:focus-visible {
+      transform: scale(1.1);
+    }
+  }
+
   &__image {
     display: block;
     font-size: 0;
@@ -24,21 +40,6 @@
 
   &__nav {
     transform: translateX(25px);
-  }
-
-  &__list {
-    display: flex;
-    gap: 21px;
-  }
-
-  &__link {
-    display: flex;
-  }
-
-  &__icon {
-    width: 30px;
-    height: 30px;
-    fill: var(--color-silver);
   }
 
   &__bottom {
@@ -54,6 +55,8 @@
     font-weight: 700;
     font-size: 16px;
     color: var(--color-light);
+    outline: none;
+    transition: color .3s ease;
 
     svg {
       width: 20px;
@@ -61,6 +64,24 @@
       color: inherit;
       fill: currentColor;
       transition: fill .3s ease-in-out;
+    }
+
+    @media (hover :hover) {
+        &:hover {
+          color: var(--color-burning-orange);
+        }
+    }
+
+    &:focus {
+      color: var(--color-tuscany);
+    }
+
+    &:focus-visible {
+      color: var(--color-burning-orange);
+    }
+
+    &:active {
+      color: var(--color-grenadier);
     }
   }
 
