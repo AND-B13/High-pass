@@ -6,17 +6,44 @@
     margin-right: var(--grid-gap);
     padding: 15px 23px;
     width: 75%;
-    border: none;
+    border: 1px solid transparent;
     font-weight: 400;
     font-size: 16px;
-    color: var(--color-burning-orange);
+    color: var(--color-light);
     outline: none;
     background-color: var(--color-tundora);
+    transition: color .3s ease, border-color .3s ease;
 
     &::placeholder {
       font-weight: 400;
       font-size: 16px;
       color: var(--color-silver);
+      transition: color .3s ease;
+    }
+
+    @media (hover :hover) {
+      &:hover {
+        color: var(--color-burning-orange);
+
+        &::placeholder {
+          color: var(--color-burning-orange);
+        }
+      }
+    }
+
+    &:focus-visible {
+      border-color: var(--color-burning-orange);
+      color: var(--color-light);
+    }
+
+    &:focus {
+      border-color: var(--color-burning-orange);
+      color: var(--color-light);
+    }
+
+    &:active {
+      border-color: transparent;
+      color: var(--color-light);
     }
   }
 }

@@ -10,10 +10,28 @@
     font-size: 16px;
     color: var(--color-pickled-bluewood);
     background-color: #c4c4c4;
-    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    outline: none;
+    transition: color .3s ease-in-out, background-color .3s ease-in-out;
 
     &:not(:last-child) {
       margin-right: var(--grid-gap);
+    }
+
+    @media (hover :hover) {
+      &:hover {
+        color: var(--color-light);
+        background-color: var(--color-burning-orange);
+      }
+    }
+
+    &:focus-visible {
+      color: var(--color-light);
+      background-color: var(--color-burning-orange);
+    }
+
+    &:active {
+      color: var(--color-light);
+      background-color: var(--color-grenadier);
     }
 
     &--active {

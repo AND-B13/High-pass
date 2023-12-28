@@ -1,4 +1,4 @@
-<section class="about-us">
+<section class="about-us" id="about-us">
   <div class="container">
     <h2 class="about-us__title title title--light">О студии</h2>
     <div class="about-us__content">
@@ -15,11 +15,12 @@
       </p>
       <div class="about-us__subscription">
         <picture class="about-us__image">
-          <img src="img/about-us.jpg" alt="Фотоопарат Canon">
+          <source srcset="./img/about-us.webp">
+          <img src="./img/about-us.jpg" alt="Фотоопарат Canon">
         </picture>
         <h3 class="about-us__subtitle">Подписаться на рассылку</h3>
         <form class="subscription" action="https://jsonplaceholder.typicode.com/posts" method="post">
-          <input class="subscription__input" placeholder="E-mail" type="email"
+          <input class="subscription__input" placeholder="E-mail" required type="email"
             aria-label="Введите почту для подписки на рассылку">
           <button class="btn btn--primary" type="submit"
             aria-label="Отправить почту для подписки на рассылку">Отправить</button>

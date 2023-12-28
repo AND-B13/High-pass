@@ -11,6 +11,7 @@ html {
 .page {
   height: 100%;
   font-family: var(--font-family);
+  scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -114,9 +115,55 @@ a {
   font-weight: 700;
   font-size: 16px;
   color: var(--color-light);
+  outline: none;
+  transition: border-color .3s ease, background-color .3s ease;
+
+  @media (hover :hover) {
+    &:hover {
+      border-color: var(--color-burning-orange);
+      background-color: var(--color-burning-orange);
+    }
+  }
+
+  &:focus {
+    border-color: var(--color-burning-orange);
+    background-color: var(--color-tuscany);
+  }
+
+  &:focus-visible {
+    border-color: var(--color-burning-orange);
+    background-color: var(--color-tuscany);
+  }
+
+  &:active {
+    border-color: var(--color-grenadier);
+    background-color: var(--color-grenadier);
+  }
 
   &--primary {
     background-color: var(--color-burning-orange);
+
+    @media (hover :hover) {
+      &:hover {
+        border-color: var(--color-tuscany);
+        background-color: var(--color-tuscany);
+      }
+    }
+
+    &:focus-visible {
+      border-color: var(--color-grenadier);
+      background-color: var(--color-burning-orange);
+    }
+
+    &:focus {
+      border-color: var(--color-grenadier);
+      background-color: var(--color-burning-orange);
+    }
+
+    &:active {
+      border-color: var(--color-grenadier);
+      background-color: var(--color-grenadier);
+    }
   }
 }
 

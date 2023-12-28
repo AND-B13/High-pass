@@ -44,7 +44,7 @@
 
   &__bottom {
     padding-top: 11px;
-    padding-bottom: 9px;
+    padding-bottom: 10px;
     background-color: var(--color-tundora);
   }
 
@@ -88,18 +88,39 @@
   &__form {
     display: flex;
     align-items: center;
-
-    svg {
-      width: 24px;
-      height: 24px;
-      fill: var(--color-light);
-    }
   }
 
   &__btn {
     display: flex;
     align-items: center;
     outline: none;
+    color: var(--color-light);
+    transition: color .3s ease;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      color: inherit;
+      fill: currentColor;
+    }
+
+    @media (hover :hover) {
+      &:hover {
+        color: var(--color-burning-orange);
+      }
+    }
+
+    &:focus {
+      color: var(--color-tuscany);
+    }
+
+    &:focus-visible {
+      color: var(--color-burning-orange);
+    }
+
+    &:active {
+      color: var(--color-grenadier);
+    }
   }
 
   &__search {
@@ -112,12 +133,31 @@
     color: var(--color-mercury);
     outline: none;
     background-color: inherit;
+    transition: border-color .3s ease;
 
     &::placeholder {
       font-family: "TTFirsNeue";
       font-weight: 400;
       font-size: 14px;
       color: var(--color-mercury);
+    }
+
+    @media (hover :hover) {
+      &:hover {
+        border-color: var(--color-burning-orange);
+      }
+    }
+
+    &:focus {
+      border-color: var(--color-tuscany);
+    }
+
+    &:focus-visible {
+      border-color: var(--color-burning-orange);
+    }
+
+    &:active {
+      border-color: var(--color-grenadier);
     }
   }
 }

@@ -98,6 +98,19 @@
 
   &__link {
     display: flex;
+    transform: scale(1);
+    outline: none;
+    transition: transform .3s ease;
+
+    @media (hover :hover) {
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    &:focus-visible {
+      transform: scale(1.1);
+    }
   }
 
   &__image {

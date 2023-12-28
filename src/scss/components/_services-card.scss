@@ -1,5 +1,6 @@
 
 .services-card {
+  position: relative;
   display: flex;
 
   &__image {
@@ -17,7 +18,6 @@
         max-width: 190px;
       }
     }
-
   }
 
   &__info {
@@ -59,6 +59,35 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 28px;
+    outline: none;
+    transition: color .3s ease;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    @media (hover :hover) {
+      &:hover {
+        color: var(--color-tuscany);
+      }
+    }
+
+    &:focus-visible {
+      color: var(--color-tuscany);
+    }
+
+    &:focus {
+      color: var(--color-tuscany);
+    }
+
+    &:active {
+      color: var(--color-grenadier);
+    }
   }
 
   &__icon {

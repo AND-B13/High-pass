@@ -1,6 +1,6 @@
 .contacts {
   padding-top: 44px;
-  padding-bottom: 67px;
+  padding-bottom: 70px;
 
   &__title {
     margin-bottom: 18px;
@@ -68,22 +68,63 @@
     font-weight: 400;
     line-height: 28px;
     color: var(--color-silver);
+    outline: none;
+    transition: color .3s ease;
+
+    @media (hover :hover) {
+      &:hover {
+        color: var(--color-burning-orange);
+      }
+    }
+
+    &:focus-visible {
+      color: var(--color-tuscany);
+    }
+
+    &:focus {
+      color: var(--color-tuscany);
+    }
+
+    &:active {
+      color: var(--color-grenadier);
+    }
   }
 
   &__link {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     font-family: "TTFirsNeue";
     font-size: 16px;
     font-weight: 400;
     color: var(--color-light);
+    outline: none;
+    transition: color .3s ease;
+
+    @media (hover :hover) {
+      &:hover {
+        color: var(--color-burning-orange);
+      }
+    }
+
+    &:focus-visible {
+      color: var(--color-tuscany);
+    }
+
+    &:focus {
+      color: var(--color-tuscany);
+    }
+
+    &:active {
+      color: var(--color-grenadier);
+    }
   }
 
 
   &__icon {
     width: 22px;
     height: 22px;
-    fill: var(--color-light);
+    color: inherit;
+    fill: currentColor;
   }
 
   &__btn-close {
@@ -94,7 +135,20 @@
     height: 20px;
     border-radius: 100%;
     transform: translate(30px, -27px);
+    color: var(--color-light);
     background-color: var(--color-grey);
+    outline: none;
+    transition: color .3s ease;
+
+    @media (hover :hover) {
+      &:hover {
+        color: red;
+      }
+    }
+
+    &:focus-visible {
+      color: red;
+    }
 
     &::after {
       content: "";
@@ -103,7 +157,8 @@
       width: 13px;
       height: 1px;
       transform: rotate(135deg) translate(-3px, -2px);
-      background-color: var(--color-light);
+      color: inherit;
+      background-color: currentColor;
     }
 
     &::before {
@@ -113,7 +168,8 @@
       width: 13px;
       height: 1px;
       transform: rotate(-135deg) translate(3px, -2px);
-      background-color: var(--color-light);
+      color: inherit;
+      background-color: currentColor;
     }
   }
 }
@@ -151,17 +207,47 @@
   }
 
   &__input {
-    padding: 16px 23px;
+    padding: 15px 23px;
     width: 100%;
+    border: 1px solid transparent;
     resize: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-mine-shaft);
     background-color: var(--color-mercury);
-
-    &--big {
-      height: 150px;
-    }
+    outline: none;
 
     &::placeholder {
       color: var(--color-silver);
+    }
+
+    @media (hover :hover) {
+      &:hover {
+        color: var(--color-burning-orange);
+
+        &::placeholder {
+          color: var(--color-burning-orange);
+        }
+      }
+    }
+
+    &:focus {
+      border-color: var(--color-burning-orange);
+      color: var(--color-mine-shaft);
+    }
+
+    &:focus-visible {
+      border-color: var(--color-burning-orange);
+      color: var(--color-mine-shaft);
+    }
+
+    &:active {
+      border-color: transparent;
+      color: var(--color-mine-shaft);
+    }
+
+    &--big {
+      height: 150px;
     }
   }
 
